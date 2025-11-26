@@ -28,13 +28,13 @@ namespace P2FixAnAppDotNetCode.Controllers
 
             if (product != null)
             {
-                if (product.Stock > 0)
-                {
-                    _cart.AddItem(product, 1);
-                    return RedirectToAction("Index");
-                }
+                _cart.AddItem(product, 1);
+                return RedirectToAction("Index");
             }
-            return RedirectToAction("Index", "Product");
+            else
+            {
+                return RedirectToAction("Index", "Product");
+            }
         }
 
         public RedirectToActionResult RemoveFromCart(int id)
