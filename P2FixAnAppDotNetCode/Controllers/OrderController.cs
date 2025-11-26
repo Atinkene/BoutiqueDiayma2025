@@ -10,12 +10,14 @@ namespace P2FixAnAppDotNetCode.Controllers
     {
         private readonly ICart _cart;
         private readonly IOrderService _orderService;
+        private readonly IProductService _productService;
         private readonly IStringLocalizer<OrderController> _localizer;
 
-        public OrderController(ICart pCart, IOrderService service, IStringLocalizer<OrderController> localizer)
+        public OrderController(ICart pCart, IOrderService service, IProductService productService, IStringLocalizer<OrderController> localizer)
         {
             _cart = pCart;
             _orderService = service;
+            _productService = productService;
             _localizer = localizer;
         }
 
@@ -28,6 +30,21 @@ namespace P2FixAnAppDotNetCode.Controllers
             {
                 ModelState.AddModelError("", _localizer["CartEmpty"]);
             }
+
+            // Vérifier que le stock est suffisant pour chaque ligne
+            if (ModelState.IsValid)
+            {
+                foreach (var line in ((Cart)_cart).Lines)
+                {
+                    Product product = _productService.GetProductById(line.Product.Id);
+                    if (product == null || product.Stock < line.Quantity)
+                    {
+                        ModelState.AddModelError("", _localizer["InsufficientStock"]);
+                        break;
+                    }
+                }
+            }
+
             if (ModelState.IsValid)
             {
                 order.Lines = (_cart as Cart)?.Lines.ToArray();

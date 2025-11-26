@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using P2FixAnAppDotNetCode.Models.Repositories;
 
 namespace P2FixAnAppDotNetCode.Models.Services
@@ -25,8 +26,30 @@ namespace P2FixAnAppDotNetCode.Models.Services
         public void SaveOrder(Order order)
         {
             order.Date = DateTime.Now;
-            _repository.Save(order);
-            UpdateInventory();
+            order.Lines = ((Cart)_cart).Lines.ToArray();
+            
+            // Vérifier et mettre à jour le stock AVANT de sauvegarder la commande
+            if (ValidateStockAvailability((Cart)_cart))
+            {
+                _repository.Save(order);
+                UpdateInventory();
+            }
+        }
+
+        /// <summary>
+        /// Validates that sufficient stock is available for all items in the cart
+        /// </summary>
+        private bool ValidateStockAvailability(Cart cart)
+        {
+            foreach (var line in cart.Lines)
+            {
+                Product product = _productService.GetProductById(line.Product.Id);
+                if (product == null || product.Stock < line.Quantity)
+                {
+                    return false;
+                }
+            }
+            return true;
         }
 
         /// <summary>
@@ -34,7 +57,7 @@ namespace P2FixAnAppDotNetCode.Models.Services
         /// </summary>
         private void UpdateInventory()
         {
-            _productService.UpdateProductQuantities(_cart as Cart);
+            _productService.UpdateProductQuantities((Cart)_cart);
             _cart.Clear();
         }
     }
