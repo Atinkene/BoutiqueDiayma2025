@@ -26,12 +26,11 @@ namespace P2FixAnAppDotNetCode.Controllers
         [HttpPost]
         public IActionResult Index(Order order)
         {
-            if (!((Cart) _cart).Lines.Any())
+            if (!((Cart)_cart).Lines.Any())
             {
                 ModelState.AddModelError("", _localizer["CartEmpty"]);
             }
 
-            // Vérifier que le stock est suffisant pour chaque ligne
             if (ModelState.IsValid)
             {
                 foreach (var line in ((Cart)_cart).Lines)
@@ -49,6 +48,7 @@ namespace P2FixAnAppDotNetCode.Controllers
             {
                 order.Lines = (_cart as Cart)?.Lines.ToArray();
                 _orderService.SaveOrder(order);
+                TempData["OrderSuccess"] = "✓ Commande confirmée avec succès !";
                 return RedirectToAction(nameof(Completed));
             }
             else

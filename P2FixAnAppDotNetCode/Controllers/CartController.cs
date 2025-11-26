@@ -22,17 +22,31 @@ namespace P2FixAnAppDotNetCode.Controllers
         }
 
         [HttpPost]
-        public RedirectToActionResult AddToCart(int id)
+        public IActionResult AddToCart(int id)
         {
             Product product = _productService.GetProductById(id);
 
             if (product != null)
             {
-                _cart.AddItem(product, 1);
-                return RedirectToAction("Index");
+                int quantityInCart = ((Cart)_cart).Lines
+                    .Where(l => l.Product.Id == id)
+                    .Sum(l => l.Quantity);
+
+                if (product.Stock > quantityInCart)
+                {
+                    _cart.AddItem(product, 1);
+                    TempData["SuccessMessage"] = $"✓ {product.Name} ajouté au panier";
+                    return RedirectToAction("Index");
+                }
+                else
+                {
+                    TempData["ErrorMessage"] = $"✗ Stock insuffisant pour {product.Name}. Disponible: {product.Stock}";
+                    return RedirectToAction("Index", "Product");
+                }
             }
             else
             {
+                TempData["ErrorMessage"] = "✗ Produit non trouvé";
                 return RedirectToAction("Index", "Product");
             }
         }
@@ -45,6 +59,7 @@ namespace P2FixAnAppDotNetCode.Controllers
             if (product != null)
             {
                 _cart.RemoveLine(product);
+                TempData["SuccessMessage"] = $"✓ {product.Name} supprimé du panier";
             }
             return RedirectToAction("Index");
         }
