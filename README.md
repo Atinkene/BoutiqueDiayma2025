@@ -65,6 +65,25 @@ La version du SDK .NET utilisée par le projet est la **2.0**.
 2. **Stock non persiste après l'achat** : Le stock était stocké en mémoire (liste statique) et réinitialisé à chaque redémarrage de l'application, causant la perte de toutes les modifications de stock.
 
 
+### **Bug #2 : Sélection de la langue espagnole non prise en compte**
+
+**Localisations concernées** :  
+- `LanguageController.cs` / `LanguageSelector`  
+- Fichiers de ressources : `*.es.resx`
+
+**Description** :  
+- Lorsqu’un utilisateur choisit la langue **espagnole**, l’application redéfinit automatiquement la langue sur **français**.  
+- Ce comportement empêche l’affichage des traductions espagnoles et rend les fichiers `*.es.resx` inutiles.  
+- La cause probable est que la valeur `"es"` n’est pas correctement persistée dans le cookie ou la session.
+
+**Conséquences** :  
+- Les utilisateurs espagnols ne peuvent pas naviguer en espagnol.  
+- Les tests de localisation échouent.
+
+**Suggestions de correction** :  
+1. Vérifier la méthode de changement de langue dans le `LanguageController` et s’assurer que `"es"` est bien enregistré.  
+2. Vérifier que le `ResourceManager` charge correctement les fichiers `*.es.resx`.  
+3. Ajouter un test unitaire pour valider la sélection de langue et éviter les régressions.
 
 
 ![img1](https://drive.google.com/uc?export=view&id=1nyd24nu9RdEuXiNKRyO-6Bg1lGF2GlPz)
