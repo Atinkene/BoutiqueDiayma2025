@@ -117,22 +117,37 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ChangeLanguage" xml:space="preserve">
-    <value>Select</value>
+  <data name="Adress" xml:space="preserve">
+    <value>Adrès</value>
   </data>
-  <data name="Language" xml:space="preserve">
-    <value>Language</value>
+  <data name="City" xml:space="preserve">
+    <value>Bëri bu njëkk</value>
   </data>
-  <data name="LanguageEnglish" xml:space="preserve">
-    <value>English</value>
+  <data name="CompleteOrder" xml:space="preserve">
+    <value>Joxal seetaan bi</value>
   </data>
-  <data name="LanguageFrench" xml:space="preserve">
-    <value>French</value>
+  <data name="Country" xml:space="preserve">
+    <value>Àddina</value>
   </data>
-  <data name="LanguageSpanish" xml:space="preserve">
-    <value>Spanish</value>
+  <data name="EnterDetails" xml:space="preserve">
+    <value>Ñu gën a jëfandikoo ci sa seetaan benn ci benn!</value>
   </data>
-  <data name="LanguageWolof" xml:space="preserve">
-    <value>Wolof</value>
+  <data name="Location" xml:space="preserve">
+    <value>Tànn</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Turu bi</value>
+  </data>
+  <data name="OrderTitle" xml:space="preserve">
+    <value>Ndank‑ndank, soppali formulaire bi</value>
+  </data>
+  <data name="ShipSoon" xml:space="preserve">
+    <value>Ñu dinañu jëfandikoo ko ci yenn ci yenn ci lu mu am.</value>
+  </data>
+  <data name="ShipTo" xml:space="preserve">
+    <value>Joxal ci</value>
+  </data>
+  <data name="Zip" xml:space="preserve">
+    <value>Kode postal bi</value>
   </data>
 </root>

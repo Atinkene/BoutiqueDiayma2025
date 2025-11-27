@@ -51,6 +51,9 @@ namespace P2FixAnAppDotNetCode
                     new CultureInfo("fr"),
                     new CultureInfo("es-ES"),
                     new CultureInfo("es"),
+                    new CultureInfo("wo-WO"),
+                    new CultureInfo("wo"),
+
                 };
 
                 opts.DefaultRequestCulture = new RequestCulture("en");
