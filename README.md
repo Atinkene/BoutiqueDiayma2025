@@ -98,6 +98,10 @@ La version du SDK .NET utilisée par le projet est la **2.0**.
 ![img15](https://drive.google.com/uc?export=view&id=1jY5hPtXDLf6TV-eWIlNtZf-NdrR63gG7)
 
 
+---
+
+
+
 ## 7. Placez un point d’arrêt sur les lignes suivantes du code :
 
   ## a) CartSummaryViewComponent ligne 12
@@ -114,6 +118,10 @@ La version du SDK .NET utilisée par le projet est la **2.0**.
 
   ## e) Startup ligne 20
 ![Description de l’image](https://drive.google.com/uc?export=view&id=1oqQWqdfm1Nv7hNRsThE2Wf71Eed4Wqms)
+
+
+---
+
 
 ## 8. Quels sont les namespaces, classes et méthodes visités avant l’affichage des produits sur l’écran d’accueil de votre navigateur ? Choisissez le mode approprié selon le contexte, "Pas à pas détaillé", "Pas à pas principal" ou "Pas à pas sortant". Vos réponses doivent être détaillées dans le fichier README du dépôt.
   
@@ -148,26 +156,80 @@ P2FixAnAppDotNetCode.Components.CartSummaryViewComponent.Invoke() Ligne 16
 AspNetCore._Views_Shared__Layout_cshtml.ExecuteAsync.AnonymousMethod__22_6() Ligne 22
 P2FixAnAppDotNetCode.Components.LanguageSelectorViewComponent.Invoke(ILanguageService languageService) Ligne 9
 AspNetCore._Views_Shared__Layout_cshtml.ExecuteAsync.AnonymousMethod__22_6() Ligne 33
+```
+
+
+---
+
 
 ## 9. Déployez votre solution sous forme d’exécutable Windows.
 
 ![img1](https://drive.google.com/uc?export=view&id=1RrHnQ6Uhb2sxrJjJ1lcWIROMDK3GwY1a)
+
 ![img2](https://drive.google.com/uc?export=view&id=1ukpi2d3XerY-dgh9XkR1RN9K7VUa3eh-)
+
 ![img3](https://drive.google.com/uc?export=view&id=1CHeAZYP4zNsjiS9Kx4ik1gUVms7S3xlW)
+
 ![img4](https://drive.google.com/uc?export=view&id=1aOyphYFg1K1iNl3JX3Cb2MLI__Db4jwE)
+
 ![img5](https://drive.google.com/uc?export=view&id=1cVk8fpr--3xpm5U6GNBslzSlKk3BCJSx)
+
 ![img6](https://drive.google.com/uc?export=view&id=1Nx0r9ECQ0FE4cc91dY5liQweGzLwQSuF)
+
 ![img7](https://drive.google.com/uc?export=view&id=1FKXzmXFXrjYLB6Iz7PEy-ZUBCwuFrD2r)
+
 ![img8](https://drive.google.com/uc?export=view&id=1iD7AyMnpHumYUMbVprsi0DiA0bmjXg3G)
+
 ![img9](https://drive.google.com/uc?export=view&id=1e9aunZyj3E995K05_9NiSLfhdv4hBxsa)
+
+
+
+---
 
 
 ## 10. Fournir un lien drive Google, Onedrive etc. à l’exécutable ci-dessus.
 [Accéder au dossier Drive](https://drive.google.com/drive/folders/1PzseFm_jL4y-gHHDaOoeX0hSnbZEKXSP?usp=drive_link)
 
 
+---
+
 
 ## 11. Optionnel :
   ## a) Ajoutez une langue d’affichage à l’interface, Wolof par exemple. Conservez les options de culture du français.
+![Image 1](https://drive.google.com/uc?export=view&id=1sgYuq5rVWAgokY7QdrjxzFemvay9R_-O)
+
+![Image 2](https://drive.google.com/uc?export=view&id=1kIszu-KU_DvjX1niV4cFlpNlzrMIrVOH)
+
+![Image 3](https://drive.google.com/uc?export=view&id=16c89roYg2JRKg6HH94pkfmlBXyFhZQ3L)
+
+![Image 4](https://drive.google.com/uc?export=view&id=1JJVlh-RgvrMsfTF9-vrtT4HIVzBSgdZ5)
+
+
   ## b) Procédez à 3 commits significatifs (changements importants) au moins.
+
+  ## Ajouts et améliorations des langues
+- **Support de la culture wolof** : Intégration complète de la langue wolof permettant de traduire toutes les pages de l'application.  
+- **Support de la culture espagnole** : Ajout de la langue espagnole pour permettre l'affichage des pages en espagnol.  
+- **Mise à jour du README** : Documentation complétée pour inclure les nouvelles langues et cultures disponibles.
+
+  ## Améliorations de l'interface et de l'expérience utilisateur (UX)
+- Optimisation de l'expérience utilisateur pour rendre l'interface plus intuitive.  
+- Gestion améliorée des messages et notifications utilisateurs pour plus de clarté.
+
+  ## Gestion des commandes et du stock
+- Validation du stock disponible avant la sauvegarde des commandes pour éviter les erreurs et ruptures.
+
+![Image 1](https://drive.google.com/uc?export=view&id=159JVy6WH7gFIiwDy5rkSraEvQDBtPTR7)
+
+![Image 2](https://drive.google.com/uc?export=view&id=1zC3fTdZ-uPdHCLe-mzB_OL9e0YgoTaHP)
+
+![Image 3](https://drive.google.com/uc?export=view&id=12tZeyd3CCuzbzOgfPO-KgCa2wTs7bd8c)
+
+![Image 4](https://drive.google.com/uc?export=view&id=1BKSSmy30fSKRcCgAuZHaqOaVjNfsz38-)
+
+
   ## c) Déposez le lien à votre dépôt github sur Google Classrooms.
+
+## Dépôt GitHub
+
+[Accéder au dépôt BoutiqueDiayma2025](https://github.com/Atinkene/BoutiqueDiayma2025.git)
