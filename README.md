@@ -7,20 +7,31 @@ Elle permet de visualiser des produits, de gérer un panier et de passer des comm
 ---
 
 ### 1. Récupérez dans Visual Studio et exécutez le code fourni lien Github.
-![Description de l’image](https://drive.google.com/uc?export=view&id=1ztNuRwtq8Vp2ZIpBcOcLn_YONq5Vu8GIg)
+![Description de l’image](https://drive.google.com/uc?export=view&id=1ztNuRwtq8Vp2ZIpBcOcLn_YONq5Vu8GI)
 
 ![Description de l’image](https://drive.google.com/uc?export=view&id=1acG4bmHBvrMIOWzrbGnpngrae3-mGFLA)
 
 ![Description de l’image](https://drive.google.com/uc?export=view&id=1N7Ia010URIC53qRbHfxNv0WBv73TB2QS)
 
 
+---
+
+
 ### 2. Quels sont les projets de la solution ?
 La solution ne comporte qu’un seul projet nommé **Diayma**
+
 ![Description de l’image](https://drive.google.com/uc?export=view&id=1N7Ia010URIC53qRbHfxNv0WBv73TB2QS)
+
+
+---
+
 
 ### 3. Quelle est la version SDK .NET utilisée par ces projets ?
 La version du SDK .NET utilisée par le projet est la **2.0**.
 ![Description de l’image](https://drive.google.com/uc?export=view&id=1CcW5xLtLYKt7Md1g3Dlgc71ZTfV8yZfN)
+
+
+---
 
 
 ### 4. Installez le SDK
@@ -29,26 +40,61 @@ La version du SDK .NET utilisée par le projet est la **2.0**.
 ![Description de l’image](https://drive.google.com/uc?export=view&id=1YkryHj8lJs-kzO5-ll8kJzJ_x4CLG-C9)
 
 
+---
+
+
 ### 5. Créez votre propre dépôt GitHub pour y stocker le code
 ![Description de l’image](https://drive.google.com/uc?export=view&id=1J2JL7MOEW4v7mSSUdp9h_-cAuS_EAZ8g)
 
 
+---
+
 
 ## 6. Explorez l’application. Signalez 2 bugs trouvés ?
+
+
+###  **Bug #1 : Pas de limite de quantité à l'ajout au panier + Stock non mis à jour après l'achat**
+
+**Localisations** : 
+- `CartController.cs`, méthode `AddToCart` (avant correction)
+- `ProductRepository.cs`, données en mémoire
+
+**Description** :
+1. **Absence de vérification du stock lors de l'ajout au panier** : Aucune limite n'était appliquée lors de l'ajout d'articles au panier. Un utilisateur pouvait ajouter plus d'articles qu'il n'y en avait en stock.
+
+2. **Stock non persiste après l'achat** : Le stock était stocké en mémoire (liste statique) et réinitialisé à chaque redémarrage de l'application, causant la perte de toutes les modifications de stock.
+
+
+
+
 ![img1](https://drive.google.com/uc?export=view&id=1nyd24nu9RdEuXiNKRyO-6Bg1lGF2GlPz)
+
 ![img2](https://drive.google.com/uc?export=view&id=1aliDEMPaTonUdUEnhP8O2Hl7TbLHuphD)
+
 ![img3](https://drive.google.com/uc?export=view&id=167xLC9TKUkaUep3a2JOTzkr6tUjycDTp)
+
 ![img4](https://drive.google.com/uc?export=view&id=11AdxUHo4_2nrVK6U917qOuMv0H3Zo-SI)
+
 ![img5](https://drive.google.com/uc?export=view&id=1iA8frkhlKMzXQX4iYPqdbG20-wYtpQK2)
+
 ![img6](https://drive.google.com/uc?export=view&id=1sxsSZr9XWLD8CJWn-02quj7XP6y4ReUm)
+
 ![img7](https://drive.google.com/uc?export=view&id=1hLcNL5SvHH3fVX52m_rIAnQMWfSfK7eh)
+
 ![img8](https://drive.google.com/uc?export=view&id=1WMizrmuWEV0OzOeAEP2Xihfy45MEmGq5)
+
 ![img9](https://drive.google.com/uc?export=view&id=1Q3Chw-ClUSo1VcsVPXK-hBE4sOJokBGG)
+
 ![img10](https://drive.google.com/uc?export=view&id=1obtIqYrkUWyYootuTxoNPEoeT_N04zfI)
+
 ![img11](https://drive.google.com/uc?export=view&id=1A1jcsNYLAFZhqB-JLG0LXiYcYCSTwjNp)
+
 ![img12](https://drive.google.com/uc?export=view&id=1CFZ7Hx2Cpbn9GYm90dzVH_SgebBwNkZB)
+
 ![img13](https://drive.google.com/uc?export=view&id=1_0qGbsuf5Goi2Nwq4o7ZtoZErlOCcWBc)
+
 ![img14](https://drive.google.com/uc?export=view&id=1oBDvmJiZop82_aNl2C94RXodKrQ3jfDl)
+
 ![img15](https://drive.google.com/uc?export=view&id=1jY5hPtXDLf6TV-eWIlNtZf-NdrR63gG7)
 
 
