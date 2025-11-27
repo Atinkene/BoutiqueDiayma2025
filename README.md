@@ -219,6 +219,8 @@ AspNetCore._Views_Shared__Layout_cshtml.ExecuteAsync.AnonymousMethod__22_6() Lig
   ## Gestion des commandes et du stock
 - Validation du stock disponible avant la sauvegarde des commandes pour éviter les erreurs et ruptures.
 
+![Image](https://drive.google.com/uc?export=view&id=1-NMtFVpWcTjwm-Su4waQrMqNSMNtxe2k)
+
 ![Image 1](https://drive.google.com/uc?export=view&id=159JVy6WH7gFIiwDy5rkSraEvQDBtPTR7)
 
 ![Image 2](https://drive.google.com/uc?export=view&id=1zC3fTdZ-uPdHCLe-mzB_OL9e0YgoTaHP)
